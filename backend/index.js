@@ -69,7 +69,7 @@ app.set("trust proxy", 1)
 app.use(session({
     secret: keys.cookieKey,
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
   // secret:"YOUR SECRET KEY",
   // resave:false,
   // saveUninitialized:true
