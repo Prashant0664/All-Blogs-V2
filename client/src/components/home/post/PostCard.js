@@ -32,6 +32,10 @@ function PostCard({ post, type }) {
         setsbook(true);
         setsbook2(false);
       }
+      else {
+        setsbook(false);
+
+      }
       const checklike = await checklikes(post._id, user.id);
       if (checklike.msg === "ok") {
         setheart(true);
@@ -47,7 +51,6 @@ function PostCard({ post, type }) {
     navigate(`/article/${post._id}`)
   }
   const handleheart = async () => {
-    console.log("liked")
     try {
       await increaseLike(post._id);
       await addheart();
@@ -96,9 +99,6 @@ function PostCard({ post, type }) {
       alert("ERROR on likening");
       return;
     }
-  }
-  const handleShare = () => {
-
   }
   const removeheart = async () => {
     try {
@@ -152,7 +152,8 @@ function PostCard({ post, type }) {
         setsbook(false);
       }
       else {
-        alert("ERROR OCCURRED");
+        setsbook(false);
+        alert("Does not exists");
         return;
       }
       setsbook2(true);
@@ -310,15 +311,12 @@ function PostCard({ post, type }) {
                 {/* hhhhkk */}
                 {type && type === "profile_bookmark" ?
                   <>
-                    {sbook ?
+                    {!sbook ?
                       <>
-
                         <CiBookmark className={`sizf`} size={25} onClick={() => {
                           setbookmark();
                         }}
-
                         />
-
                       </>
                       :
                       <>
