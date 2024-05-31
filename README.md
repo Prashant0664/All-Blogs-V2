@@ -18,8 +18,9 @@
 Welcome to the Blogging Website project! This is a web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It allows users to create and manage their blogs, post projects, follow other users, comment on blogs, save content, bookmark blogs, like blogs and more. The application also includes features such as email verification for user registration and Redux for state management.
 
 ---
-## Demo
+## Demo Link: 
 
+Full Demo Video Drive link: https://drive.google.com/file/d/1zPDw9Q28q-86CVlG62k5363gzIeGL7YX/view?usp=sharing
 
 ---
 
