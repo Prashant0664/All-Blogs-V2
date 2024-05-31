@@ -181,11 +181,6 @@ router.post("/login/success", async (req, res) => {
       likes: req.user.likes,
       bookmarks: req.user.bookmarks,
   });
-    // res.status(200).json({
-    //   success: true,
-    //   message: "successfull",
-    //   user: { id: req.user._id, name: req.user.name, email: req.user.email, googleId: req.user.googleId, picture: req.user.picture }
-    // });
   } else {
     return res.status(401).json({
       success: false,

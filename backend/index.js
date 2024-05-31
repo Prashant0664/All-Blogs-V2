@@ -67,18 +67,20 @@ app.set("trust proxy", 1)
 //   })
 // );
 app.use(session({
+    proxy : true, 
     secret: keys.cookieKey,
     resave: false,
     saveUninitialized: true,
   // secret:"YOUR SECRET KEY",
   // resave:false,
   // saveUninitialized:true
-  // cookie: {
-          // maxAge: 15 * 24 * 60 * 60 * 1000,
+  cookie: {
+          maxAge: 15 * 24 * 60 * 60 * 1000,
+          sameSite: 'strict',
           // httpOnly: false,
           // sameSite: "none",
           // secure: false,
-        // },
+        },
 }))
 
 app.use(passport.initialize());
