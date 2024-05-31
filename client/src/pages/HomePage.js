@@ -35,7 +35,7 @@ function HomePage({ user, category }) {
         })
         .catch((err) => {
           console.log(data)// deletethisfromfinal
-          console.log(err,"error in logging in");
+          console.log(err,"error in logging in up");
         });
     }
   };
