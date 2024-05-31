@@ -17,13 +17,13 @@ require('dotenv').config();
 
 app.use(
   cors({
-    origin: ["https://all-blogs-v2.onrender.com", `https://allblogsv2assignment.vercel.app`],
+    origin: "https://all-blogs-v2.onrender.com",
     // origin: [`${process.env.REACT_APP_BACKEND_URL}`, `${process.env.REACT_APP_FRONTEND_URL}`],
-    // origin: ["http://localhost:5000", "http://localhost:3000"],
+    // origin: ["http://localhost:5000", "http://localhost:3001"],
     // origin :'*',
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
-  })
+  }) 
 );
 
 mongoose.set("strictQuery", false);
@@ -41,11 +41,11 @@ var store = new MongoDBStore(
   }
 );
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', "Backend url"); 
-//   res.setHeader('Access-Control-Allow-Credentials', 'true'); 
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', "Backend url"); 
+  res.setHeader('Access-Control-Allow-Credentials', 'true'); 
+  next();
+});
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
