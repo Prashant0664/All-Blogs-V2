@@ -26,12 +26,13 @@ passport.use(new GoogleStrategy({
         if(user && !user.bookmarkslist){
           user.bookmarkslist = {};
         }
-        console.log("passport func 1");
         if(user)user.save();
       }
     )
     User.findOne({ googleId: profile.id }).then((existingUser) => {
       if (existingUser) {
+          // console.log(9);
+          // console.log(existingUser)
           return done(null, existingUser)
         } else {
           var url=profile.photos[0].value;
@@ -43,7 +44,7 @@ passport.use(new GoogleStrategy({
       })
     }
     catch (error) {
-      // console.log(error)
+      console.log(error, "error here 4")
     }
   }
 ));
@@ -59,19 +60,15 @@ passport.use(new GoogleStrategy({
 // })
 
 passport.serializeUser((user, done) => {
-  try {
-    console.log(1);
-    done(null, user);
-  } catch (error) {
-    console.log("error",error);
-  }
+  console.log(1);
+  done(null, user);
   
 })
 
 // used to deserialize the user
 passport.deserializeUser((user, done) => {
-  console.log(22,user);
+  console.log(29);
   done(null, user);
 })
-passport.initialize();
-passport.session();
+// passport.initialize();
+// passport.session();
