@@ -60,7 +60,7 @@ passport.use(new GoogleStrategy({
 
 passport.serializeUser((user, done) => {
   try {
-    console.log(1, user);
+    console.log(1);
     done(null, user);
   } catch (error) {
     console.log("error",error);
@@ -70,7 +70,7 @@ passport.serializeUser((user, done) => {
 
 // used to deserialize the user
 passport.deserializeUser((user, done) => {
-  console.log(22);
+  console.log(22,user);
   done(null, user);
 })
 // passport.initialize();
