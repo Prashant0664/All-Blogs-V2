@@ -66,7 +66,7 @@ passport.serializeUser((user, done) => {
 
 // used to deserialize the user
 passport.deserializeUser((user, done) => {
-  console.log(user);
+  console.log(22);
   done(null, user);
 })
 // passport.initialize();
