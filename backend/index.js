@@ -11,6 +11,7 @@ const fileUpload = require("express-fileupload");
 const userRoutes = require("./routes/user.js");
 const uploadRoutes = require("./routes/upload.js");
 const postRoutes = require("./routes/post.js");
+var cookieParser = require('cookie-parser')
 var MongoDBStore = require("connect-mongodb-session")(session);
 require('dotenv').config();
 
@@ -66,6 +67,7 @@ app.set("trust proxy", 1)
 //     // store: store,
 //   })
 // );
+app.use(cookieParser())
 app.use(session({
     proxy : true, 
     secret: keys.cookieKey,
