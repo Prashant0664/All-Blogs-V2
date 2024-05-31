@@ -42,7 +42,6 @@ var store = new MongoDBStore(
 );
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', "https://all-blogs-v2.onrender.com"); 
   res.setHeader('Access-Control-Allow-Credentials', 'true'); 
   next();
 });
