@@ -1,3 +1,15 @@
+## To setup .env file:
+
+``.env`` file contains only two values:
+
+```
+REACT_APP_BACKEND_URL="http://localhost:5000"
+REACT_APP_FRONTEND_URL=http://localhost:3000
+```
+
+- `REACT_APP_BACKEND_URL` contain the backend URL
+- `REACT_APP_FRONTEND_URL` contain the frontend URL
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
