@@ -60,14 +60,12 @@ passport.use(new GoogleStrategy({
 // })
 
 passport.serializeUser((user, done) => {
-  console.log(1);
   done(null, user);
   
 })
 
 // used to deserialize the user
 passport.deserializeUser((user, done) => {
-  console.log(29);
   done(null, user);
 })
 // passport.initialize();

@@ -7,7 +7,7 @@ exports.google_auth = async (req, res) => {
     try {
         res.redirect('/');
     } catch (error) {
-        console.log(error, "error real");
+        (error, "error real");
         return res.status(400).json({ msg: "Bad Request" })
     }
 }
@@ -16,7 +16,6 @@ exports.google_auth_callback = async (req, res) => {
     try {
         // res.redirect(CLIENT_URL);
     } catch (error) {
-        console.log(error, "error real2");
         // // console.log(error);
         return res.status(400).json({ msg: "Bad Request" })
     }
