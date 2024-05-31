@@ -33,6 +33,8 @@ Here are some of the key features of this Blogging Website:
 
 🔥 **Sharing:** Users can share any blogs on social media platforms;
 
+🔥 **Filter Blogs:** Users can search other users and filter content according to category.
+
 🔥 **Project Posting:** Users can share and showcase their projects on their profile.
 
 🔥 **Social Features:** Users can follow other users, comment on blogs, and save, like and bookmark content they like.
@@ -95,7 +97,7 @@ Before you begin, make sure you have the following installed on your system:
 
 5. Set up your MongoDB database and configure the connection details in the backend's `.env` file.
 
-_IMP :Seperate setup of both frontend and backend is given in *client* and *backend* folders *Readme.md*_
+_IMP: Seperate setup of both frontend and backend is given in *client* and *backend* folders *Readme.md*_
 
 6. Start the backend server:
    ```
