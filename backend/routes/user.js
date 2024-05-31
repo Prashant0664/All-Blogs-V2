@@ -168,7 +168,7 @@ router.get("/login/failed", (req, res) => {
 });
 
 router.post("/login/success", async (req, res) => {
-  // console.log(req.user,"lll");
+  console.log(req.user,req,"request is here");
   if (req.isAuthenticated()) {
     // console.log(999);
     const token = generateToken({ id: req.user._id.toString() }, "15d");
