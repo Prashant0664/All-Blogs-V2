@@ -73,12 +73,12 @@ app.use(session({
   // secret:"YOUR SECRET KEY",
   // resave:false,
   // saveUninitialized:true
-  cookie: {
-          maxAge: 15 * 24 * 60 * 60 * 1000,
+  // cookie: {
+          // maxAge: 15 * 24 * 60 * 60 * 1000,
           // httpOnly: false,
           // sameSite: "none",
-          secure: false,
-        },
+          // secure: false,
+        // },
 }))
 
 app.use(passport.initialize());

@@ -73,5 +73,5 @@ passport.deserializeUser((user, done) => {
   console.log(22,user);
   done(null, user);
 })
-// passport.initialize();
-// passport.session();
+passport.initialize();
+passport.session();
