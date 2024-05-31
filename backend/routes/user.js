@@ -190,7 +190,6 @@ router.post("/login/success", async (req, res) => {
       success: false,
       message: "Un-successfull",
       user: null,
-      req:req // deletethisfromfinal
     });
   }
 });
