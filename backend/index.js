@@ -17,10 +17,10 @@ require('dotenv').config();
 
 app.use(
   cors({
-    // origin: ["https://all-blogs-v2.onrender.com","https://allblogsv2assignment.vercel.app"],
+    origin: ["https://all-blogs-v2.onrender.com","https://allblogsv2assignment.vercel.app"],
     // origin: [`${process.env.REACT_APP_BACKEND_URL}`, `${process.env.REACT_APP_FRONTEND_URL}`],
     // origin: ["http://localhost:5000", "http://localhost:3001"],
-    origin :'*',
+    // origin :'*',
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   }) 
@@ -68,21 +68,26 @@ app.set("trust proxy", 1)
 // );
 app.use(cookieParser())
 app.use(session({
-    proxy : true, 
-    secret: keys.cookieKey,
-    resave: false,
-    saveUninitialized: true,
-  // secret:"YOUR SECRET KEY",
-  // resave:false,
-  // saveUninitialized:true
-  cookie: {
-          maxAge: 15 * 24 * 60 * 60 * 1000,
-          sameSite: 'strict',
-          // httpOnly: false,
-          // sameSite: "none",
-          // secure: false,
-        },
+  secret:"YOUR SECRET KEY",
+  resave:false,
+  saveUninitialized:true
 }))
+// app.use(session({
+//     proxy : true, 
+//     secret: keys.cookieKey,
+//     resave: false,
+//     saveUninitialized: true,
+//   // secret:"YOUR SECRET KEY",
+//   // resave:false,
+//   // saveUninitialized:true
+//   cookie: {
+//           maxAge: 15 * 24 * 60 * 60 * 1000,
+//           sameSite: 'strict',
+//           // httpOnly: false,
+//           // sameSite: "none",
+//           // secure: false,
+//         },
+// }))
 
 app.use(passport.initialize());
 app.use(passport.session());
