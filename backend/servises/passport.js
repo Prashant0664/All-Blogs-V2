@@ -26,13 +26,12 @@ passport.use(new GoogleStrategy({
         if(user && !user.bookmarkslist){
           user.bookmarkslist = {};
         }
+        console.log("passport func 1");
         if(user)user.save();
       }
     )
     User.findOne({ googleId: profile.id }).then((existingUser) => {
       if (existingUser) {
-          // console.log(9);
-          // console.log(existingUser)
           return done(null, existingUser)
         } else {
           var url=profile.photos[0].value;
