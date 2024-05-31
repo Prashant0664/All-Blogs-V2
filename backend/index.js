@@ -17,7 +17,7 @@ require('dotenv').config();
 
 app.use(
   cors({
-    origin: "https://all-blogs-v2.onrender.com",
+    origin: ["https://all-blogs-v2.onrender.com","https://allblogsv2assignment.vercel.app"],
     // origin: [`${process.env.REACT_APP_BACKEND_URL}`, `${process.env.REACT_APP_FRONTEND_URL}`],
     // origin: ["http://localhost:5000", "http://localhost:3001"],
     // origin :'*',
