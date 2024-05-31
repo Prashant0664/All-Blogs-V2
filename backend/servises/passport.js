@@ -59,8 +59,12 @@ passport.use(new GoogleStrategy({
 // })
 
 passport.serializeUser((user, done) => {
-  console.log(1);
-  done(null, user);
+  try {
+    console.log(1, user);
+    done(null, user);
+  } catch (error) {
+    console.log("error",error);
+  }
   
 })
 
