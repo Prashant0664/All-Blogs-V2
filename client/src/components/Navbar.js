@@ -66,7 +66,7 @@ function Navbar({ postpage }) {
           });
         })
         .catch((err) => {
-          // console.log(err);
+          console.log(err,"real error");
         });
     }
   };
