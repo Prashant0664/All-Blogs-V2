@@ -34,6 +34,7 @@ function HomePage({ user, category }) {
           navigate("/");
         })
         .catch((err) => {
+          console.log(data)// deletethisfromfinal
           console.log(err,"error in logging in");
         });
     }
