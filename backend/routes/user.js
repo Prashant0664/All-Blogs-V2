@@ -186,7 +186,6 @@ router.post("/login/success", async (req, res) => {
     //   user: { id: req.user._id, name: req.user.name, email: req.user.email, googleId: req.user.googleId, picture: req.user.picture }
     // });
   } else {
-    console.log("failed",error);
     return res.status(401).json({
       success: false,
       message: "Un-successfull",
